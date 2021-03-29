@@ -28,14 +28,11 @@ jobs:
     - name: Run progarm
       run: |
         python ./src/main.py
+        ls -l
     - name: Save Changes
       run: |
         git config user.name "${GITHUB_ACTOR}"
         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        echo "cheguei aqui1"
         git add .
-        echo "cheguei aqui2"
-        git commit -am "Update dynamic content"
-        echo "cheguei aqui3"
+        git commit -m "Update dynamic content"
         git push --all -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
-        echo "cheguei aqui4"
