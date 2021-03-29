@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: python
         uses: actions/setup-python@main
@@ -25,9 +27,10 @@ jobs:
           python -m pip list
       - name: Run progarm
         run: |
-          git branch -a
-          touch 'ollá mundo' > text.html
+          cd ${GITHUB_WORKSPACE}/
+          pwd
           python src/main.py
+
       - name: Save Changes
         run: |
           ls -l

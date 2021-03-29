@@ -62,7 +62,7 @@ class GitData:
 
     data = []
 
-    for x in array[0:-1]:
+    for x in array[0:-2]:
       file = StringIO(x)
       df = pd.read_csv(file, sep=',')
       data.append(df.iloc[0])
@@ -80,7 +80,10 @@ a = GitData()
 
 print(a.get_branches())
 
-for x in a.get_branches()['all_branches']:
-  logDf = a.get_log(x)
-  print(logDf)
-  a.saveCsvFile(logDf, f'./{x}.csv')
+# logDf = a.get_log(a.get_branches()[0])
+# print('quantos comits?', logDf)
+
+# for x in a.get_branches()['all_branches']:
+#   logDf = a.get_log(x)
+#   print('quantos comits?', len(logDf))
+#   a.saveCsvFile(logDf, f'./{x}.csv')
