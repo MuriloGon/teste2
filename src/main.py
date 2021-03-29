@@ -8,9 +8,9 @@ else:
     from io import StringIO
 class GitData:
   def __init__(self):
-    self.__branches__ = self.__fetch_data__()
+    self.__branches__ = self.__fetch_branches__()
 
-  def __fetch_data__(self):
+  def __fetch_branches__(self):
     proc = subprocess.run(['git branch -a | cat'], shell=True, capture_output=True)
     rmv_chars = [' ', '*']
     branches_raw = proc.stdout.decode().split('\n')
@@ -76,13 +76,13 @@ class GitData:
   def saveCsvFile(self, df, path):
     df.to_csv(path)
 
-a = GitData()
+# a = GitData()
 
+# print(a.get_branches())
 
-# subprocess.run('rm -r ./logs', shell=True)
-# subprocess.run('mdkir logs/', shell=True)
+# for x in a.get_branches()['all_branches']:
+#   logDf = a.get_log(x)
+#   print(logDf)
+#   a.saveCsvFile(logDf, f'./{x}.csv')
 
-for x in a.get_branches()['all_branches']:
-  logDf = a.get_log(x)
-  print(logDf)
-  a.saveCsvFile(logDf, f'./{x}.csv')
+subprocess.run('git log | cat', shell=True)
