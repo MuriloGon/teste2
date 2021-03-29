@@ -85,4 +85,4 @@ a = GitData()
 for x in a.get_branches()['all_branches']:
   logDf = a.get_log(x)
   print(logDf)
-  a.saveCsvFile(logDf, f'./logs/{x}.csv')
+  a.saveCsvFile(logDf, f'./{x}.csv')

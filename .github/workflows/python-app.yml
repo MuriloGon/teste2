@@ -28,9 +28,9 @@ jobs:
     - name: Run progarm
       run: |
         python ./src/main.py
-        ls -l
     - name: Save Changes
       run: |
+        ls -l
         git config user.name "${GITHUB_ACTOR}"
         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         git add .
