@@ -76,13 +76,11 @@ class GitData:
   def saveCsvFile(self, df, path):
     df.to_csv(path)
 
-# a = GitData()
+a = GitData()
 
-# print(a.get_branches())
+print(a.get_branches())
 
-# for x in a.get_branches()['all_branches']:
-#   logDf = a.get_log(x)
-#   print(logDf)
-#   a.saveCsvFile(logDf, f'./{x}.csv')
-
-subprocess.run('git log | cat', shell=True)
+for x in a.get_branches()['all_branches']:
+  logDf = a.get_log(x)
+  print(logDf)
+  a.saveCsvFile(logDf, f'./{x}.csv')
