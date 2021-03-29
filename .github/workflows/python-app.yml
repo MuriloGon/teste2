@@ -28,7 +28,7 @@ jobs:
     - name: Run progarm
       run: |
         python ./src/main.py
-    - name: 🚀 Deploy
+    - name: Save Changes
       run: |
         git config user.name "${GITHUB_ACTOR}"
         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
