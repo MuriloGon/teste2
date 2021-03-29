@@ -1,6 +1,11 @@
 import subprocess
+import sys
+import pandas as pd
 
-
+if sys.version_info[0] < 3: 
+    from StringIO import StringIO
+else:
+    from io import StringIO
 class GitData:
   def __init__(self):
     self.__branches__ = self.__fetch_data__()
@@ -26,6 +31,8 @@ class GitData:
       if(item != ''):  
         all_branches.append(branch)
     
+    all_branches = all_branches[0:-2]
+
     for branch in all_branches:
       if(branch != current_branch):
         left_branches.append(branch)
@@ -40,18 +47,42 @@ class GitData:
     return self.__branches__
   
   def get_log(self, branch):
-    output = ''
-    current_branch = self.__branches__['current_branch']
-    subprocess.run(f'git checkout ${branch}', shell=True)
+    """
+      \"hash\",\"author_date\",\"author_name\",\"author_email\",\"committer_date\",\"committer_name\",\"committer_email\",\"subject\",\"body\"
+      \\n
+      \"%h\",\"%ai\",\"%an\",\"%ae\",\"%ci\",\"%cn\",\"%ce\",\"s\",\"b\"\n
+    """
+    options = '--pretty=format:\\\"hash\\\",\\\"author_date\\\",\\\"author_name\\\",\\\"author_email\\\",\\\"committer_date\\\",\\\"committer_name\\\",\\\"committer_email\\\",\\\"subject\\\",\\\"body\\\""%n"\\\""%h"\\\",\\\""%ai"\\\",\\\""%an"\\\",\\\""%ae"\\\",\\\""%ci"\\\",\\\""%cn"\\\",\\\""%ce"\\\",\\\""%s"\\\",\\\""%b"\\\"##end'
+    rawstring = ''
     
-    a = subprocess.run(f'git log ${branch} | cat', shell=True, capture_output=True)
-    output = a.stdout.decode()
-    subprocess.run(f'git checkout ${current_branch}', shell=True)
+    proc = subprocess.run(f'git log --no-merges {branch} {options} | cat', shell=True, capture_output=True)
+    rawstring = proc.stdout.decode()
     
-    print(output)
+    array = rawstring.split('##end')
+
+    data = []
+
+    for x in array[0:-1]:
+      file = StringIO(x)
+      df = pd.read_csv(file, sep=',')
+      data.append(df.iloc[0])
+
+    df = pd.DataFrame(data,)
+    df.reset_index(inplace=True)
+    
+    del df['index']
+    return df
+
+  def saveCsvFile(self, df, path):
+    df.to_csv(path)
 
 a = GitData()
 
-print('atual', a.get_branches())
-a.get_log('main')
 
+# subprocess.run('rm -r ./logs', shell=True)
+# subprocess.run('mdkir logs/', shell=True)
+
+for x in a.get_branches()['all_branches']:
+  logDf = a.get_log(x)
+  print(x)
+  a.saveCsvFile(logDf, f'./logs/{x}.csv')
