@@ -27,6 +27,7 @@ jobs:
         run: |
           git branch -a
           touch 'ollá mundo' > text.html
+          python src/main.py
       - name: Save Changes
         run: |
           ls -l
