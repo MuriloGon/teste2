@@ -10,13 +10,13 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-deploy:
   
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.9
+    - name: :rocket: Criando ambiente python
+      uses: actions/checkout@main
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
@@ -26,7 +26,7 @@ jobs:
         pip install matplotlib
         pip install pandas
     - name: Run progarm
-      run: |
+      run:
         python ./src/main.py
     - name: Save Changes
       run: |
