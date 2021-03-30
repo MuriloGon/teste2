@@ -26,6 +26,6 @@ do
   
   echo $HEADER | cat >> $DATA_LOGS/${branch[2]}.txt 
 
-  git log -a "${branches[$i]}" $OPTIONS | cat >> $DATA_LOGS/${branch[2]}.txt 
+  git log "${branches[$i]}" $OPTIONS | cat >> $DATA_LOGS/${branch[2]}.txt 
 done
 
