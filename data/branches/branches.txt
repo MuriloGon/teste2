@@ -1,5 +1,0 @@
-remotes/origin/branchcomlabelmuitolongohahaha
-remotes/origin/main
-remotes/origin/novo2
-remotes/origin/novobarnch10
-remotes/origin/novobranch
