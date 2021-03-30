@@ -76,9 +76,9 @@ class GitData:
   def saveCsvFile(self, df, path):
     df.to_csv(path)
 
-a = GitData()
+# a = GitData()
 
-print(a.get_branches())
+# print(a.get_branches())
 
 # logDf = a.get_log(a.get_branches()[0])
 # print('quantos comits?', logDf)
