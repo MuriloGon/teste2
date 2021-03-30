@@ -28,7 +28,7 @@ jobs:
       - name: Run progarm
         run: |
           cd ${GITHUB_WORKSPACE}/
-          git branch -a | grep remotes | tr -d '[:blank:]' | cat > branches.txt
+          scripts/get_branches.sh
 
       - name: Save Changes
         run: |
