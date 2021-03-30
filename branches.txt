@@ -1,0 +1,3 @@
+  remotes/origin/main
+  remotes/origin/novo2
+  remotes/origin/novobranch
