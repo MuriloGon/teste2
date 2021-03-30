@@ -1,4 +1,1 @@
-  remotes/origin/branchcomlabelmuitolongohahaha
-  remotes/origin/main
-  remotes/origin/novo2
-  remotes/origin/novobranch
+remotes/origin/branchcomlabelmuitolongohahaharemotes/origin/mainremotes/origin/novo2remotes/origin/novobarnch10remotes/origin/novobranch
