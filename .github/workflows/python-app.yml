@@ -27,7 +27,9 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/
           scripts/gitData.sh
-
+      - name: Make ReadmeFile
+        run: |
+          python scripts/main.py
       - name: Save Changes
         run: |
           git config user.name "${GITHUB_ACTOR}"
