@@ -4,6 +4,7 @@ remotes/origin/branchtesteautomatizado
 remotes/origin/branchtestelucasgodoi
 remotes/origin/lucaspedroso_teste
 remotes/origin/main
+remotes/origin/master
 remotes/origin/novo2
 remotes/origin/novobarnch10
 remotes/origin/novobranch
