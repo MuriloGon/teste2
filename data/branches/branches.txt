@@ -2,6 +2,7 @@ remotes/origin/G2-B01-movie-cards-library
 remotes/origin/branchcomlabelmuitolongohahaha
 remotes/origin/branchtesteautomatizado
 remotes/origin/branchtestelucasgodoi
+remotes/origin/lucaspedroso_teste
 remotes/origin/main
 remotes/origin/novo2
 remotes/origin/novobarnch10
