@@ -1,4 +1,6 @@
 "hash","author_date","author_name","author_email","committer_date","committer_name","committer_email","subject","body"
+"0f6b147","2021-03-31 13:35:06 +0000","Murilo Gonçalves","murilo.gon@live.com","2021-03-31 13:35:06 +0000","gitbook-bot","ghost@gitbook.com","GitBook: [master] no pages and 7 assets modified",""
+"4865aff","2021-03-31 13:28:39 +0000","MuriloGon","MuriloGon@users.noreply.github.com","2021-03-31 13:28:39 +0000","MuriloGon","MuriloGon@users.noreply.github.com","Update dynamic content",""
 "1aa120a","2021-03-31 13:28:12 +0000","Murilo Gonçalves","murilo.gon@live.com","2021-03-31 13:28:12 +0000","gitbook-bot","ghost@gitbook.com","GitBook: [master] 2 pages modified",""
 "01b22de","2021-03-30 02:22:17 +0000","MuriloGon","MuriloGon@users.noreply.github.com","2021-03-30 02:22:17 +0000","MuriloGon","MuriloGon@users.noreply.github.com","Update dynamic content",""
 "3f0a677","2021-03-29 23:21:06 -0300","Murilo Gonçalves","murilo.gon@live.com","2021-03-29 23:21:06 -0300","Murilo Gonçalves","murilo.gon@live.com","cmit1",""

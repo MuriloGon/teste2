@@ -1,4 +1,5 @@
 "hash","author_date","author_name","author_email","committer_date","committer_name","committer_email","subject","body"
+"dd2c17a","2021-03-31 13:35:07 +0000","Murilo Gonçalves","murilo.gon@live.com","2021-03-31 13:35:07 +0000","gitbook-bot","ghost@gitbook.com","GitBook: [G2-B01-movie-cards-library] 2 pages and 7 assets modified",""
 "c6385c8","2021-03-26 08:21:22 -0300","Murilo Gonçalves","murilo.gon@live.com","2021-03-26 08:21:22 -0300","Murilo Gonçalves","murilo.gon@live.com","test(propTypes): fix required proptype",""
 "b039ad4","2021-03-23 02:29:18 -0300","Murilo Gonçalves","murilo.gon@live.com","2021-03-23 02:29:18 -0300","Murilo Gonçalves","murilo.gon@live.com","feat(requirement 17) :rocket: add propTypes to all clases",""
 "241b9cd","2021-03-23 02:28:32 -0300","Murilo Gonçalves","murilo.gon@live.com","2021-03-23 02:28:32 -0300","Murilo Gonçalves","murilo.gon@live.com","feat(requirement 16) :rocket: render <MovieList/> in  <App/>",""
